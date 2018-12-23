@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url "http://nifty-gui.sourceforge.net/nifty-maven-repo"
+	}
+}
+
+dependencies {
+	compile 'org.lwjgl.lwjgl:lwjgl:2.9.3'
+	compile 'org.lwjgl.lwjgl:lwjgl_util:2.9.3'
+	compile 'slick:slick:20121001-264'
+	compile 'com.googlecode.soundlibs:jorbis:0.0.17-2'
+}
